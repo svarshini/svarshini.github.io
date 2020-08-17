@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Parallel MSC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a style = "line-height: 1" href="#">GPU Parallel Computation of Morse-Smale Complexes</a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+						<div class="image fit flush">
+							<img src="images/parallel_msc/msc_1234_horiz.png" alt="" />
+							<p style= "margin-top:0.5cm; text-align:justify; text-align: center; font-size:10px; text-decoration:none"> Image Source: <a style="color:blue; text-decoration:none" href="http://www.sci.utah.edu/people/jediati.html">Attila Gyulassy </a> , Data Analysis and Visualization Using the Morse-Smale Complex </p>
+							
+						</div>
+
+						<div class="content">
+							<p style="text-align:justify"> A Morse-Smale Complex is a topological descriptor that succintly captures the gradient flow of an underlying scalar field. It is popularly used in a number of application domains such as cosmology, biology, material science, etc. Increasing feature complexity and an exponential growth in data calls for the use of parallel computing to facilitate efficient computation of this descriptor. This work introduces a completely GPU-parallel pipeline for the computation of the Morse-Smale Complex and improves upon the state-of-the-art by upto 7x. The project was conducted under the guidance of <a style="color:blue;text-decoration:none" href="https://www.csa.iisc.ac.in/~vijayn/">Prof. Vijay Natarajan</a> at the Visualization and Graphics Lab, Department of Computer Science and Automation, Indian Institute of Science.</p>
+							<p>Some highlights of this work are - </p>
+
+							<ul>
+							<li>We introduce a novel parallel BFS algorithm to mark saddle-saddle reachability through graph wavefront propagation. It achieves a speedup of upto <b>129x</b>.</li>
+							<li>We introduce an efficient computation of saddle-saddle paths which solves a multi-source multi-destination path counting problem. It achieves a speedup of upto <b>4.51x</b>.</li>
+							<li>Our method is the first of its kind to utilize a completely GPU parallel pipeline for the computation of a Morse-Smale Complex. The end-to-end computation outperforms the state-of-the-art (<a style="color:blue;text-decoration:none" href="https://vgl.csa.iisc.ac.in/pdf/pub/ms3dparallel.pdf">Shivashankar et al.</a>) by upto <b>7x</b>.</li>
+							<li>This work was presented at the annual <b>Bangalore VIS Workshop 2020</b>, the slides for which can be found <a style="color:blue;text-decoration:none" href="https://docs.google.com/presentation/d/1Pn4Fl2tZhis2PG4YoOq5cSmsogRUeTr9y1fX7leS-0E/edit?usp=sharing">here</a>.
+							</li>
+							<li>The results have been submitted to the <b>VIS 2020 conference</b>. The submission can be found <a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1JKB8pg_9npRYkMFFTvtHihD_3cA6rdfM/view?usp=sharing">here</a>. 
+							</li>  
+							<li>The code for this work will be released in the public domain soon.
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Morse-Smale Complex Visualization</h2>
+							<p style="color: white">Images of example datasets and their Morse-Smale Complexes</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/parallel_msc/hydrogen_colormap.png"><img src="images/parallel_msc/hydrogen_colormap.png" alt="" /></a>
+									<p style="color: white; text-align: center; font-size:13px">Hydrogen (128 x 128 x 128)</p>
+									</div>
+								</div>
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/parallel_msc/hydrogen_msc.png"><img src="images/parallel_msc/hydrogen_msc.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Morse-Smale Complex of Hydrogen</p>
+									</div>
+								</div>
+
+												
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/parallel_msc/neghip_colormap.png"><img src="images/parallel_msc/neghip_colormap.png" alt="" /></a>
+									<p style="color: white; text-align: center; font-size:13px">Neghip (64 x 64 x 64)</p>
+									</div>
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/parallel_msc/neghip_msc.png"><img src="images/parallel_msc/neghip_msc.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Morse-Smale Complex of Neghip</p>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/hydrogen+neghip.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Isosurface Animation</h3>
+								<p style="text-align:justify">Click on <a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1uoVlIdkJmxNOTyUJJtScSFe5D5Ev0Lbx/view?usp=sharing">Hydrogen</a> and <a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1oNEX4gtcDpNRh8HtrCoOr9U7Zpv1qDaU/view?usp=sharing">Neghip</a> to view animations of their isosurface evolution.</p>
+							</div>
+						</div>
+
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/parallel_bfs_graph.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Parallel BFS Algorithm</h3>
+								<p style="text-align:justify">This algorithm marks all reachable gradient pairs between 1-saddles and 2-saddles. It traverses the graph using two frontiers - current and next, which advance in a bottom-up fashion by marking nodes as visited.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/condensed+pathcount.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Path Counting Algorithm</h3>
+								<p style="text-align:justify">This records all source-destination pairs in the condensed MS graph (left). This is done by contracting all simple paths of the MS graph into edges, thus giving us a minor DAG as seen. The pairs are counted in an embarrassingly parallel mannner and are stored in adjacency matrices.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/condensed+matrixmult.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Sparse Matrix Multiplication</h3>
+								<p style="text-align:justify">We use sparse matrix multiplication to count all the final paths between 1-saddles and 2-saddles by iteratively connecting the 1-saddles at the lowest level to the nodes at the discovered level.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/msc_result_table.png" alt="" /></div>
+							<div class="inner">
+								<h3>Runtime Results</h3>
+								<p>The table (left) presents the runtime comparisons with the state-of-the-art, together with speedups obtained for individual stages of the pipeline. The overall MS complex computation demonstrates speedups ranging from <b>1.33x</b> to <b>7x</b>. The parallel BFS algorithm yields upto <b>129x</b> speedup as observed in the Foot dataset. It yields speedups even for the smaller datasets, with a minimum of <b>2.97x</b> for Fuel. The path counting algorithm results in upto <b>4.51x</b> speedup as seen in Aneurysm. </p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/indegree+matrixmult.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Special Cases</h3>
+								<p style="text-align:justify">We handle a few special cases in the matrix multiplication based path counting. As shown (left), a node can be revisited at multiple levels (eg. node 6). Such a node appears at different
+depths from the source and each unique visit should be recorded. We utilize a storage matrix (as shown in the pseudocode) to tackle this.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/parallel_msc/aneurysm_combined.jpg" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Ongoing Work</h3>
+								<p style="text-align:justify">We are currently working on developing a parallel algorithm for the persistence simplification of the Morse-Smale Complex. This corresponds to the smoothening of the underlying scalar field by measuring persistence as a difference in function value and cancelling pairs below a certain threshold value. The parallel algorithm computes maximal independent sets on the underlying MS graph to perform cancellations in parallel. As shown (left), the images show the surviving critical points after serial cancellations (top) and parallel cancellations (bottom) on the dataset 'Aneurysm'. This work is presently ongoing and more results are to follow.</p>
+							</div>
+						</div>
+					</section>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a style="color:#404040;text-decoration:none" href="https://www.linkedin.com/in/varshini-subhash-144882118/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a style="color:#404040;text-decoration:none" href="https://github.com/svarshini" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<!--<li><a style="color:#404040;text-decoration:none" href="#" class="icon fa-bitbucket"><span class="label">BitBucket</span></a></li>-->
+						<li><a style="color:#404040;text-decoration:none" href="mailto: varshinis@iisc.ac.in" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; All rights reserved. Design: <a style="color:silver;text-decoration:none" href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

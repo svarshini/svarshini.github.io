@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Quadtrees</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a style = "line-height: 1" href="#">Adaptive Mesh Refinement Using Quadtrees</a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+						<div class="image fit flush">
+							<a href="#"><img src="images/quadtree/combined_fn_1.png" alt="" /></a>
+						</div>
+
+						<div class="content">
+							<p style="text-align:justify"> Finite Element Analysis (FEA) is a numerical method that stitches up local solutions into global ones with the aid of meshes. The accuracy of the solution obtained is directly dependent on the refinement of the mesh used. Erroneous regions of the underlying FE domain can be captured by error functions or point clouds, which can further be used to adaptively refine meshes and improve the solution accuracy. </p> 
+<p>This work implements mesh generation algorithms introduced by Bern, Eppstein and Gilbert, in the paper - <a href="https://www.sciencedirect.com/science/article/pii/S0022000005800595#:~:text=We%20study%20several%20versions%20of,meshes%20for%20finite%20element%20methods.&text=All%20our%20triangulations%20have%20size,and%20output%20of%20size%20k." style="color:blue;text-decoration:none">Provably Good Mesh Generation</a>. It takes in a user-defined error function or point cloud which quantifies the underlying error, based on which a preliminary quadtree is constructed. Methods of balancing and strong balancing as prescribed by Bern and Eppstein are applied after which stencils are fit, to obtain the final adaptively refined mesh. The implementation was successfully used to demonstrate the reduction of error by solving an obstacle problem. This work was conducted under the guidance of <a href="http://iiscprofiles.irins.org/profile/66413" style="color:blue;text-decoration:none">Prof. Ramsharan Rangarajan</a> at the Mechanics and Computation Lab, Department of Mechanical Engineering, Indian Institute of Science.</p>
+							<p>Some highlights of this work are - </p>
+
+							<ul>
+							<li>This work was used to generate adaptively refined meshes for user-defined error functions and point clouds, with provable guarantees of being good quality triangulations.</li>
+							<li>The efficacy of this work was demonstrated by solving an obstacle problem with a regular mesh and an adaptively refined one, followed by a comparison of solution accuracies.
+							<li>The code for this work can be found <a style="color:blue;text-decoration:none" href="https://github.com/svarshini/adaptive-mesh-refinement">here</a>.</li> 
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Examples & Results</h2>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/quadtree/quad_eg.png"><img src="images/quadtree/quad_eg.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Preliminary quadtree for error function: f(x , y) = k + xy , k = 0.1</p>
+									</div>
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/quadtree/quad_strongbal_eg.png"><img src="images/quadtree/quad_strongbal_eg.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px ">Strongly balanced quadtree</p>
+									</div>
+
+								</div>
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/quadtree/fn_20.png"><img src="images/quadtree/fn_20.png" alt="" /></a>
+									<p style="color: white; text-align: center; font-size:13px">Quadtree for error function: f(x , y) = k + xy , k = 0.01</p>
+									</div>
+								</div>
+				
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/quadtree/fn_21.png"><img src="images/quadtree/fn_21.png" alt="" /></a>
+									<p style="color: white; text-align: center; font-size:13px">Adaptively refined mesh obtained</p>
+									</div>
+								</div>
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/quadtree/surface+re.png"><img src="images/quadtree/surface+re.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Obstacle Problem: Regular mesh used to study contact between the clamped membrane and flat plate (obstacle)</p>
+									</div>
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/quadtree/surface+ad.png"><img src="images/quadtree/surface+ad.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Adaptively refined mesh generated to improve the solution accuracy of the problem</p>
+									</div>
+
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/quadtree/regular.png"><img src="images/quadtree/regular.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Displacement Flux v/s Theta (contact region boundary). True solution value of flux = 0. Obtained flux range = [-0.1, 0.1]</p>
+									</div>
+
+								</div>
+								
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/quadtree/adaptive.png"><img src="images/quadtree/adaptive.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Displacement Flux v/s Theta (contact region boundary). True solution value of flux = 0. Obtained flux range = [-0.03, 0.03]</p>
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/quadtree/obstacle.png" alt="" /></div>
+							<div class="inner">
+								<h3>Obstacle Problem</h3>
+								<p>The obstacle problem studies the contact region boundary between a thin square membrane clamped at its four corners and a flat infinite plate which acts as an obstacle. Two meshes were tested, a regular triangulation and an adaptively refined triangulation based on an input point cloud. The solution obtained by the adaptively refined mesh was in the range <b>[-0.03, 0.03]</b> as opposed to the range <b>[-0.1, 0.1]</b> obtained by the regular mesh. This demonstrates nearly an order of magnitude higher accuracy in the adaptively refined mesh, since the true solution for the <b>displacement flux = 0</b>.</p>
+								<p>View initial guesses perturbed to final positions: <a href="https://drive.google.com/file/d/1IOzifYf8BHggjbA-HivGS_h2RY_TP1e5/view?usp=sharing" style="color:blue;text-decoration:none">Regular Mesh</a> & <a href="https://drive.google.com/file/d/1xxiptNiM7ObWSdgsUgJG_vPH8cu4fi-S/view?usp=sharing" style="color:blue;text-decoration:none">Adaptive Mesh</a></p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/quadtree/combined_fn_4.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Stencil Fitting</h3>
+								<p style="text-align:justify">Bern and Eppstein recommend the fitting of stencils to obtain provably good meshes after generating the strongly balanced quadtree, the animation for which can be viewed <a href="https://drive.google.com/file/d/1cdFSpRAuKsAJgAKXbktAYR3iQbJQT7g9/view?usp=sharing" style="color:blue;text-decoration:none">here</a>.</p>
+							</div>
+						</div>
+						
+						<div class="spotlight">
+							<div class="image flush"><img src="images/quadtree/combined_fn_5.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Adaptively Refined Meshes From Point Clouds</h3>
+								<p style="text-align:justify">A hole in a plate can be analysed as shown using an adaptively refined mesh. The inputs include the dimensions of the plate and a point cloud describing the hole. Click <a href="https://drive.google.com/file/d/16SWnZ2DBl92PQpVAp9UxDEH9hsTkKhjB/view?usp=sharing" style="color:blue;text-decoration:none">here</a> to view the animation.</p>
+							</div>
+						</div>
+
+						<div class="spotlight">
+							<div class="image flush"><img src="images/quadtree/combined_fn_3.png" alt="" /></a></div>
+							<div  class="inner">
+								<p style="text-align:justify">Any arbitrary point cloud (like the flower shown in the image) can be used to generate a mesh which can be refined in an adaptive manner, using this algorithm. Click <a href="https://drive.google.com/file/d/1wW5HrqTtggSrudJQe89wP6ytvIGKvy8I/view?usp=sharing" style="color:blue;text-decoration:none">here</a> to view the animation.</p>
+							</div>
+						</div>
+
+					</section>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a style="color:#404040;text-decoration:none" href="https://www.linkedin.com/in/varshini-subhash-144882118/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a style="color:#404040;text-decoration:none" href="https://github.com/svarshini" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<!--<li><a style="color:#404040;text-decoration:none" href="#" class="icon fa-bitbucket"><span class="label">BitBucket</span></a></li>-->
+						<li><a style="color:#404040;text-decoration:none" href="mailto: varshinis@iisc.ac.in" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; All rights reserved. Design: <a style="color:silver;text-decoration:none" href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

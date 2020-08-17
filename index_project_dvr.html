@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>DVR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a style = "line-height: 1" href="#">Parallel Performance in Mesh Optimization</a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+						<div class="image fit flush">
+							<a href="https://epubs.siam.org/doi/abs/10.1137/16M1089101"><img src="images/dvr/dvr.png" alt="" /></a>
+						<p style= "margin-top:0.5cm; text-align:justify; text-align: center; font-size:12px; text-decoration:none"> Image Source: <a style="color:blue; text-decoration:none" href="https://epubs.siam.org/doi/abs/10.1137/16M1089101">Provably Robust Directional Vertex Relaxation</a></p>
+						</div>
+
+						<div class="content">
+							<p style="text-align:justify"> Directional Vertex Relaxation (DVR) is a mesh optimization algorithm introduced by Rangarajan et al. in the paper - <a href="https://epubs.siam.org/doi/abs/10.1137/16M1089101" style="color:blue;text-decoration:none">Provably Robust Directional Vertex Relaxation for Geometric Mesh Optimization</a>. A parallel version of the DVR algorithm has been introduced using OpenMP. This project involved improving the performance and scalability of parallel DVR. Performance bottlenecks were analyzed using profiling and large scale mesh optimization was performed. This work was conducted under the guidance of <a href="http://iiscprofiles.irins.org/profile/66413" style="color:blue;text-decoration:none">Prof. Ramsharan Rangarajan</a> at the Mechanics and Computation Lab, Department of Mechanical Engineering, Indian Institute of Science.</p>
+							<p>Some results are listed below - </p>
+
+							<ul>
+							<li>The parallel execution time was reduced by <b>47.4%</b>.</li>
+							<li><b>100%</b> scalability was ensured in all 2D and 3D meshes which translated to a <b>40x</b> speedup.</p></li>
+							<li>Meshing software such as CGAL, Hypermesh and Tetgen were used to prepare large scale meshes that demonstrate parallel optimization.</li>
+							<li>The mesh 'Nefertiti' with 14,315,330 elements and 2,953,326 nodes was relaxed by 40 threads in <b>1.33 mins</b> as opposed to a single thread execution of <b>52.16 mins</b>.</li>  
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Parallel Directional Vertex Relaxation</h2>
+							<p style="color: white">Top to bottom: Image of the mesh followed by the quality vector plot and a plot of 'Speedup v/s Threads' demonstrating 100% scalability in parallel DVR</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/dvr/2_6.2MeshSlice_resized.png"><img src="images/dvr/2_6.2MeshSlice_resized.png" alt="" /></a>
+									</div>
+								</div>
+				
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/dvr/pmdc_resized.png"><img src="images/dvr/pmdc_resized.png" alt="" /></a>
+									</div>
+								</div>
+
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/dvr/QualityVector2_6.2.png"><img src="images/dvr/QualityVector2_6.2.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Quality v/s Quality Vector Index (q-00: input, q-25: dvr)</p>
+									</div>
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/dvr/QualityVectorpmdc.png"><img src="images/dvr/QualityVectorpmdc.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px ">Quality v/s Quality Vector Index (q-00: input, q-25: dvr)</p>
+									</div>
+
+								</div>
+
+								<div>
+									<div style="width: 99%" class="image fit flush">
+										<a href="images/dvr/2_6.2GNU.png"><img src="images/dvr/2_6.2GNU.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Speedup v/s Threads</p>
+									</div>
+								</div>
+
+								<div>
+
+									<div style="width: 99%" class="image fit flush">
+
+										<a href="images/dvr/pmdcGNU.png"><img src="images/dvr/pmdcGNU.png" alt="" /></a>
+										<p style="color: white; text-align: center; font-size:13px">Speedup v/s Threads</p>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/dvr/original_scaling.png" alt="" /></div>
+							<div class="inner">
+								<h3>Improvement in Scalability</h3>
+								<p>Initial scalability tests [left] for parallel DVR yielded a 20x speedup for 30 threads beyond which there was no improvement. The results we obtained after our performance and scalability analysis yielded a <b>47.4%</b> reduction in parallel execution time and a <b>40x</b> speedup (100% scalability).</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/dvr/nefertiti_resized.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Large Scale Mesh Optimization Results</h3>
+								<p style="text-align:justify">Large-scale meshes were generated using CGAL, Hypermesh and Tetgen to extract maximum parallel performance from the algorithm. For instance, the mesh Nefertiti [left] with 14,315,330 elements and 2,953,326 nodes was relaxed by 40 threads in <b>1.33 mins</b> as opposed to a single thread execution of <b>52.16 mins</b>.</p>
+								<p style="text-align:justify"> To view a slice of this mesh during relaxation, click <a href="images/dvr/nefertiti-tet.png" style="color:blue;text-decoration:none">here</a>.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="inner">
+								<h3 style="text-align: justify">MESH OPTIMIZATION VISUALIZATION</h3>
+								<p> Click on examples below to visualize the mesh relaxation -
+								<ul>
+								<li>Delaunay Triangulation (2D) optimized <a href="https://drive.google.com/file/d/1WBM1ezkNxAp13TWJ0kGMoOPVqi7w_fqc/view?usp=sharing" style="color:blue;text-decoration:none">here</a>.</li>
+								<li>A slice of the mesh 'Hand' being relaxed <a href="https://drive.google.com/file/d/1GKQ7zqBLEacWENkJOfV9bobJRe8o-17K/view?usp=sharing" style="color:blue;text-decoration:none">here</a>.</li>
+								<li>A slice of the mesh 'PMDC' being relaxed <a href="https://drive.google.com/file/d/1JUHPtacgzVpWvlxTShAKBhzIYxo6EpJ-/view?usp=sharing" style="color:blue;text-decoration:none">here</a>.</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a style="color:#404040;text-decoration:none" href="https://www.linkedin.com/in/varshini-subhash-144882118/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a style="color:#404040;text-decoration:none" href="https://github.com/svarshini" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<!--<li><a style="color:#404040;text-decoration:none" href="#" class="icon fa-bitbucket"><span class="label">BitBucket</span></a></li>-->
+						<li><a style="color:#404040;text-decoration:none" href="mailto: varshinis@iisc.ac.in" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; All rights reserved. Design: <a style="color:silver;text-decoration:none" href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

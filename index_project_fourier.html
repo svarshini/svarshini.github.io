@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Fourier Transforms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a style = "line-height: 1" href="#">Fourier Transforms</a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+						<div class="image fit flush">
+							<img src="images/fourier/fourier_cover_final.png" alt="" />
+						</div>
+
+						<div class="content">
+							<p style="text-align:justify"> Fourier Transforms are ubiquitous in mathematical areas which require the decomposition of a function into its constituent frequencies. This work attempts to capture the beautiful piece of mathematics that governs Fourier Transforms and is inspired the video by <a href="https://www.youtube.com/watch?v=spUNpyF58BY" style="color:blue;text-decoration:none">3Blue1Brown</a>.</p>
+							<p style="text-align:justify"> Some of the key features of this work include: </p>
+							<ul>
+							<li>Wrapping input signals in a circular fashion to capture the patterns that emerge for varying wrapping frequencies.</li>
+							<li>Visualizing the aligned patterns that emerge when the signal frequency matches the wrapping frequency, indicating one of the constituent pure frequencies of the signal. In these cases, the centre of mass of the image shifts from the origin as explained by 3Blue1Brown, thus illustrating the Fourier Transform's ability to pick out pure frequencies from a mixed signal.</li>
+							<li>Visualization of the square wave and sawtooth wave approximated by their Fourier series.</li>
+							</ul>
+							<p style="text-align:justify">All images were generated using Python, by using packages like Matplotlib, Numpy and SciPy, the code for which can be found <a href="https://github.com/svarshini/FourierTransforms" style="color:blue;text-decoration:none">here</a>.</p>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Wrapped Signal Patterns</h2>
+							<p style="color: white">Images of the input signal cos(&#952) wrapped at various frequencies</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_1.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_2.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_3.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_4.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_5.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_6.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Three -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<p style="color: white">Wrapping input signal cos(2&#952)+sin(10&#952), note the unique patterns for frequencies which match the wave frequency, causing a shift in the centre of mass of the pattern.</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_21.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_22.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_23.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_24.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_25.png" alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="images/fourier/fourier_26.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Four -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/fourier/square+sawtooth.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Square Wave and Sawtooth Wave</h3>
+								<p style="text-align:justify">Functions can be approximated by their Fourier Transforms. Here, a square wave and sawtooth wave (left) are approximated by computing their Fourier coefficients. The number of Fourier coefficients used determines the degree of approximation obtained. Visualize the approximations obtained for a varying number of coefficients for the <a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1QvvoDjnLsWkw8f-mRsiD048TeXI_yACV/view?usp=sharing">square wave</a> and <a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1wARTmxOe5oZgSPwskJBiUWEvNFdGPWCo/view?usp=sharing">sawtooth wave</a>.</p>
+							</div>
+							</div>
+						
+					</section>
+
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/fourier/all_signals.png" alt="" /></a></div>
+							<div  class="inner">
+								<h3>Signal Wrapping Animations</h3>
+								<p style="text-align:justify"> Arbitrary input signals wrapped around at varying frequencies:
+								<ul>
+								<li><a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1oYaWwxWQusTHVamm2B9Cfu8LM1ep2023/view?usp=sharing">cos(&#952)</a> (top left)</li>
+								<li><a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1wzuirGznU506lIBgUSlMCcMdeKnABbrf/view?usp=sharing">sin(&#952)</a> (top right)</li>
+								<li><a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1bn9cq86k_vwQm-ux6cDd762pI9JDEFPq/view?usp=sharing">cos(2&#952)+sin(3&#952)</a> (bottom left)</li>
+								<li><a style="color:blue;text-decoration:none" href="https://drive.google.com/file/d/1PpiZSPw4Namtw4IaNt96xpwgJg5uyuhl/view?usp=sharing">cos(2&#952)+sin(10&#952)</a> (bottom right)</li>
+								</ul>
+								<p style="text-align:justify"> Note that the patterns are perfectly aligned when the wrapping frequencies match the signal frequency, thus giving us the constituent pure frequencies from a mixed signal. Thus, the Fourier Transforms are akin to a mathematical machine that can decompose any function into a sum of pure frequency sine and cosine waves.
+							</div>
+							</div>
+						
+					</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a style="color:#404040;text-decoration:none" href="https://www.linkedin.com/in/varshini-subhash-144882118/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a style="color:#404040;text-decoration:none" href="https://github.com/svarshini" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<!--<li><a style="color:#404040;text-decoration:none" href="#" class="icon fa-bitbucket"><span class="label">BitBucket</span></a></li>-->
+						<li><a style="color:#404040;text-decoration:none" href="mailto: varshinis@iisc.ac.in" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; All rights reserved. Design: <a style="color:silver;text-decoration:none" href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
