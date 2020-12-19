@@ -37,18 +37,17 @@
 						</div>
 
 						<div class="content">
-							<p style="text-align:justify; color:#383838"> A Morse-Smale Complex is a topological descriptor that succintly captures the gradient flow of an underlying scalar field. It is popularly used in a number of application domains such as cosmology, biology, material science, etc. Increasing feature complexity and an exponential growth in data calls for the use of parallel computing to facilitate efficient computation of this descriptor. This work introduces a completely GPU-parallel pipeline for the computation of the Morse-Smale Complex and improves upon the state-of-the-art by upto 7x. The project was conducted under the guidance of <a style="color:blue;text-decoration:none" href="https://www.csa.iisc.ac.in/~vijayn/">Prof. Vijay Natarajan</a> at the Visualization and Graphics Lab, Department of Computer Science and Automation, Indian Institute of Science.</p>
+							<p style="text-align:justify; color:#383838"> A Morse-Smale complex is a topological descriptor that succintly captures the gradient flow of an underlying scalar field. It is popularly used in a number of application domains such as cosmology, biology, material science, etc. Increasing feature complexity and an exponential growth in data calls for the use of parallel computing to facilitate efficient computation of this descriptor. This work introduces a completely GPU-parallel pipeline for the computation of the Morse-Smale complex and improves upon the state-of-the-art by upto 7x. The project was conducted under the guidance of <a style="color:blue;text-decoration:none" href="https://www.csa.iisc.ac.in/~vijayn/">Prof. Vijay Natarajan</a> at the Visualization and Graphics Lab, Department of Computer Science and Automation, Indian Institute of Science.</p>
 							<p style="color:#383838">Some highlights of this work are - </p>
 
 							<ul>
 							<li style="color:#383838">We introduce a novel parallel BFS algorithm to mark saddle-saddle reachability through graph wavefront propagation. It achieves a speedup of upto <b>129x</b>.</li>
 							<li style="color:#383838">We introduce an efficient computation of saddle-saddle paths which solves a multi-source multi-destination path counting problem. It achieves a speedup of upto <b>4.51x</b>.</li>
-							<li style="color:#383838">Our method is the first of its kind to utilize a completely GPU parallel pipeline for the computation of a Morse-Smale Complex. The end-to-end computation outperforms the state-of-the-art (<a style="color:blue;text-decoration:none" href="https://vgl.csa.iisc.ac.in/pdf/pub/ms3dparallel.pdf">Shivashankar et al.</a>) by upto <b>7x</b>.</li>
-							<li style="color:#383838">This work was <b>accepted</b> for <a style="color:blue;text-decoration:none" href="https://arxiv.org/abs/2009.03707">publication</a> and <a style="color:blue;text-decoration:none" href="https://www.youtube.com/watch?v=c7GtTG_5rzk">presentation</a> in the Short Paper Proceedings of the <b>IEEE VIS 2020 conference</b>. 
-							</li> 
-							<li style="color:#383838">Results were also presented at the annual <b>Bangalore VIS Workshop 2020</b>.
-							</li> 
-							<li style="color:#383838">The code for this work will be released in the public domain soon.
+							<li style="color:#383838">Our method is the first of its kind to utilize a completely GPU parallel pipeline for the computation of a Morse-Smale complex. The end-to-end computation outperforms the state-of-the-art (<a style="color:blue;text-decoration:none" href="https://vgl.csa.iisc.ac.in/pdf/pub/ms3dparallel.pdf">Shivashankar et al.</a>) by upto <b>7x</b>.</li>
+							<li style="color:#383838">This work was accepted for <a style="color:blue;text-decoration:none" href="https://arxiv.org/abs/2009.03707">publication</a> and <a style="color:blue;text-decoration:none" href="https://www.youtube.com/watch?v=c7GtTG_5rzk">presentation</a> at the <b>IEEE VIS 2020 Conference</b>. 
+							</li>
+							<li style="color:#383838">Results were presented at the annual <b>Bangalore VIS Workshop 2020</b> and accepted for presentation at the <b>ACM ARCS Symposium 2020</b>.</li> 
+							<li style="color:#383838">The code for this work will be released in the public domain soon.</li>
 							</ul>
 						</div>
 					</section>
@@ -57,7 +56,7 @@
 					<section id="two" class="wrapper style2">
 						<header>
 							<h2>Morse-Smale Complex Visualization</h2>
-							<p style="color: white">Images of example datasets and their Morse-Smale Complexes</p>
+							<p style="color: white">Images of example datasets and their Morse-Smale complexes</p>
 						</header>
 						<div class="content">
 							<div class="gallery">
@@ -71,7 +70,7 @@
 								<div>
 									<div style="width: 99%" class="image fit flush">
 										<a href="images/parallel_msc/hydrogen_msc.png"><img src="images/parallel_msc/hydrogen_msc.png" alt="" /></a>
-										<p style="color: white; text-align: center; font-size:13px">Morse-Smale Complex of Hydrogen</p>
+										<p style="color: white; text-align: center; font-size:13px">Morse-Smale complex of Hydrogen</p>
 									</div>
 								</div>
 
@@ -89,7 +88,7 @@
 									<div style="width: 99%" class="image fit flush">
 
 										<a href="images/parallel_msc/neghip_msc.png"><img src="images/parallel_msc/neghip_msc.png" alt="" /></a>
-										<p style="color: white; text-align: center; font-size:13px">Morse-Smale Complex of Neghip</p>
+										<p style="color: white; text-align: center; font-size:13px">Morse-Smale complex of Neghip</p>
 									</div>
 
 								</div>
@@ -148,7 +147,7 @@ depths from the source and each unique visit should be recorded. We utilize a st
 							<div class="image flush"><img src="images/parallel_msc/aneurysm_combined.jpg" alt="" /></a></div>
 							<div  class="inner">
 								<h3>Ongoing Work</h3>
-								<p style="text-align:justify; color:#383838">We are currently working on developing a parallel algorithm for the persistence simplification of the Morse-Smale Complex. This corresponds to the smoothening of the underlying scalar field by measuring persistence as a difference in function value and cancelling pairs below a certain threshold value. The parallel algorithm computes maximal independent sets on the underlying MS graph to perform cancellations in parallel. As shown (left), the images show the surviving critical points after serial cancellations (top) and parallel cancellations (bottom) on the dataset 'Aneurysm'. This work is presently ongoing and more results are to follow.</p>
+								<p style="text-align:justify; color:#383838">We are currently working on developing a parallel algorithm for the persistence simplification of the Morse-Smale complex. This corresponds to the smoothening of the underlying scalar field by measuring persistence as a difference in function value and cancelling pairs below a certain threshold value. The parallel algorithm computes maximal independent sets on the underlying MS graph to perform cancellations in parallel. As shown (left), the images show the surviving critical points after serial cancellations (top) and parallel cancellations (bottom) on the dataset 'Aneurysm'. This work is presently ongoing and more results are to follow.</p>
 							</div>
 						</div>
 					</section>
